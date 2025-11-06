@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small helpers to replicate original look where Tailwind utilities aren't enough */
+.icon-bg {
+  @apply rounded-lg p-2;
+}
+.sidebar-width {
+  width: 260px;
+}
+.main-max {
+  max-width: 1200px;
+}
