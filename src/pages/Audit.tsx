@@ -1,4 +1,5 @@
 import React from 'react'
+import AppButton from '../components/shared/AppButton'
 
 export default function Audit(){
   return (
@@ -16,7 +17,10 @@ export default function Audit(){
           </select>
           <select className="border rounded p-2"><option>All Users</option></select>
           <select className="border rounded p-2"><option>All Actions</option></select>
-          <div className="flex items-end"><button className="px-4 py-2 bg-clinicblue text-white rounded">Apply Filters</button></div>
+          <div className="flex items-end"><AppButton
+            name="Apply Filters"
+            onClick={() => console.log("Add staff clicked")}
+          /></div>
         </div>
       </div>
 

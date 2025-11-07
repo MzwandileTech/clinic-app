@@ -1,4 +1,5 @@
 import React from 'react'
+import AppButton from '../components/shared/AppButton'
 
 export default function Inventory(){
   return (
@@ -16,7 +17,9 @@ export default function Inventory(){
       <div className="bg-white rounded-lg shadow p-4">
         <div className="flex justify-between mb-3">
           <h3 className="font-semibold">Stock Items</h3>
-          <button className="px-3 py-1 bg-clinicblue text-white rounded">Add Stock Item</button>
+          {/* <button className="px-3 py-1 bg-clinicblue text-white rounded">Add Stock Item</button> */}
+          <AppButton name="Add Stock Item"
+            onClick={() => console.log("Add staff clicked")} />
         </div>
         <div className="overflow-auto">
           <table className="w-full text-sm">
