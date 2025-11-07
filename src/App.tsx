@@ -12,6 +12,11 @@ import Inventory from './pages/Inventory'
 import Reports from './pages/Reports'
 import Settings from './pages/Settings'
 
+
+import DashboardPage from './pages/practitioner/DashboardPage'
+import AppointmentsPage from './pages/practitioner/AppointmentsPage'
+import PatientsPage from './pages/practitioner/PatientsPage'
+
 export default function App(){
   return (
     <Layout>
@@ -27,6 +32,13 @@ export default function App(){
         <Route path='/reports' element={<Reports />} />
         <Route path='/settings' element={<Settings />} />
       </Routes>
+      <Routes>
+          <Route path="/practitioner-dashboard" element={<DashboardPage />} /> 
+          <Route path="/practitioner-appointments" element={<AppointmentsPage />} /> 
+          <Route path="/practitioner-patients" element={<PatientsPage />} /> 
+          
+        </Routes>
     </Layout>
+       
   )
 }
