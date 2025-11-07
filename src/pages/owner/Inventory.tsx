@@ -1,6 +1,6 @@
 import React from "react";
 import { FaExclamationTriangle } from "react-icons/fa";
-import AppButton from "../components/shared/AppButton";
+import AppButton from "../../components/shared/AppButton";
 
 const Inventory: React.FC = () => {
   const inventoryData = [

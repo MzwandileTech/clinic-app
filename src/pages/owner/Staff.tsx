@@ -1,7 +1,7 @@
 import React from 'react'
-import AppButton from '../components/shared/AppButton'
-import Header from '../components/Header'
-import StaffCard from '../components/staff components/StaffCard'
+import AppButton from '../../components/shared/AppButton'
+import Header from '../../components/Header'
+import StaffCard from '../../components/staff components/StaffCard'
 
 export default function Staff(){
   return (

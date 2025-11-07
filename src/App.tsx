@@ -1,44 +1,106 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import Index from './pages/Index'
+import Layout from './components/OwnerLayout'
+import Landingpage from './pages/landing/Landingpage'
 import DashboardP from './pages/DashboardP'
-import DashboardA from './pages/DashboardA'
-import Appointments from './pages/Appointments'
-import Patients from './pages/Patients'
-import Staff from './pages/Staff'
-import Audit from './pages/Audit'
-import Inventory from './pages/Inventory'
-import Reports from './pages/Reports'
-import Settings from './pages/Settings'
-
-
+import DashboardA from './pages/owner/DashboardA'
+import Staff from './pages/owner/Staff'
+import Audit from './pages/owner/Audit'
+import Inventory from './pages/owner/Inventory'
+import Reports from './pages/owner/Reports'
+import Settings from './pages/owner/Settings'
 import DashboardPage from './pages/practitioner/DashboardPage'
 import AppointmentsPage from './pages/practitioner/AppointmentsPage'
 import PatientsPage from './pages/practitioner/PatientsPage'
+import PractionerLayout from './components/PractionerLayout'
 
-export default function App(){
+export default function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path='/' element={<Index />} />
-        <Route path='/dashboard-p' element={<DashboardP />} />
-        <Route path='/dashboard-a' element={<DashboardA />} />
-        <Route path='/appointments' element={<Appointments />} />
-        <Route path='/patients' element={<Patients />} />
-        <Route path='/staff' element={<Staff />} />
-        <Route path='/audit' element={<Audit />} />
-        <Route path='/inventory' element={<Inventory />} />
-        <Route path='/reports' element={<Reports />} />
-        <Route path='/settings' element={<Settings />} />
-      </Routes>
-      <Routes>
-          <Route path="/practitioner-dashboard" element={<DashboardPage />} /> 
-          <Route path="/practitioner-appointments" element={<AppointmentsPage />} /> 
-          <Route path="/practitioner-patients" element={<PatientsPage />} /> 
-          
-        </Routes>
-    </Layout>
-       
+    <Routes>
+      <Route path="/" element={<Landingpage />} />
+
+      {/* Pages WITH layout */}
+      {/* <Route
+        path="/dashboard-p"
+        element={
+          <Layout>
+            <DashboardP />
+          </Layout>
+        }
+      /> */}
+      <Route
+        path="/dashboard-a"
+        element={
+          <Layout>
+            <DashboardA />
+          </Layout>
+        }
+      />
+      <Route
+        path="/staff"
+        element={
+          <Layout>
+            <Staff />
+          </Layout>
+        }
+      />
+      <Route
+        path="/audit"
+        element={
+          <Layout>
+            <Audit />
+          </Layout>
+        }
+      />
+      <Route
+        path="/inventory"
+        element={
+          <Layout>
+            <Inventory />
+          </Layout>
+        }
+      />
+      <Route
+        path="/reports"
+        element={
+          <Layout>
+            <Reports />
+          </Layout>
+        }
+      />
+      <Route
+        path="/settings"
+        element={
+          <Layout>
+            <Settings />
+          </Layout>
+        }
+      />
+      <Route
+        path="/practitioner-dashboard"
+        element={
+          <PractionerLayout>
+            <DashboardPage />
+          </PractionerLayout>
+        }
+      />
+      <Route
+        path="/appointments"
+        element={
+          <PractionerLayout>
+            <AppointmentsPage />
+          </PractionerLayout>
+        }
+      />
+      <Route
+        path="/patient-records"
+        element={
+          <PractionerLayout>
+            <PatientsPage />
+          </PractionerLayout>
+        }
+      />
+    </Routes>
   )
 }
+

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import AppButton from "../components/shared/AppButton";
-import FilterSelect from "../components/report components/FilterSelect"; // ✅ Import reusable component
+import AppButton from "../../components/shared/AppButton";
+import FilterSelect from "../../components/report components/FilterSelect"; // ✅ Import reusable component
 
 const Settings: React.FC = () => {
   const [clinicInfo, setClinicInfo] = useState({

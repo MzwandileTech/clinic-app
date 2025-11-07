@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../components/Header'
-import StatCard from '../components/dashboard components/StatCard'
+import Header from '../../components/Header'
+import StatCard from '../../components/dashboard components/StatCard'
 
 export default function DashboardA(){
   return (

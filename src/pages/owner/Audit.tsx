@@ -1,7 +1,7 @@
 import React from "react";
-import FilterSelect from "../components/report components/FilterSelect";
+import FilterSelect from "../../components/report components/FilterSelect";
 import { Eye, Edit3, Plus, Trash2, LogIn } from "lucide-react";
-import AppButton from "../components/shared/AppButton";
+import AppButton from "../../components/shared/AppButton";
 
 const AuditLogs: React.FC = () => {
   const logs = [

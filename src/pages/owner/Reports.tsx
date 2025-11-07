@@ -1,7 +1,7 @@
 import React from "react";
-import ReportTable from "../components/report components/ReportTable";
-import FilterSelect from "../components/report components/FilterSelect";
-import AppButton from "../components/shared/AppButton";
+import ReportTable from "../../components/report components/ReportTable";
+import FilterSelect from "../../components/report components/FilterSelect";
+import AppButton from "../../components/shared/AppButton";
 
 const Reports: React.FC = () => {
   return (
